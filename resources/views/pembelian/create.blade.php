@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends ('layouts.app')
 
 @section('content')
     <div class="container">
@@ -7,14 +7,14 @@
                 @include('layouts/_flash')
                 <div class="card">
                     <div class="card-header">
-                        Data Siswa
+                        Data Pembelian
                     </div>
                     <div class="card-body">
                         <form action="{{ route('pembelian.store') }}" method="post">
                             @csrf
                             <div class="mb-3">
                                 <label class="form-label">Nama Pembeli</label>
-                                <input type="text" class="form-control  @error('nama_pembeli') is-invalid @enderror"
+                                <input type="text" class="form-control @error('nama_pembeli') is-invalid @enderror"
                                     name="nama_pembeli">
                                 @error('nama_pembeli')
                                     <span class="invalid-feedback" role="alert">
@@ -22,10 +22,9 @@
                                     </span>
                                 @enderror
                             </div>
-                            
                             <div class="mb-3">
                                 <label class="form-label">Tanggal Pembelian</label>
-                                <input type="date" class="form-control  @error('tgl_pembelian') is-invalid @enderror"
+                                <input type="date" class="form-control @error('tgl_pembelian') is-invalid @enderror"
                                     name="tgl_pembelian">
                                 @error('tgl_pembelian')
                                     <span class="invalid-feedback" role="alert">
@@ -35,8 +34,8 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Nama Barang</label>
-                                <textarea class="form-control  @error('nama_barang') is-invalid @enderror"
-                                 name="nama_barang"></textarea>
+                                <input type="text" class="form-control @error('nama_barang') is-invalid @enderror"
+                                    name="nama_barang">
                                 @error('nama_barang')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -45,7 +44,8 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Harga Satuan</label>
-                                <textarea class="form-control  @error('harga_satuan') is-invalid @enderror" name="harga_satuan"></textarea>
+                                <input type="text" class="form-control @error('harga_satuan') is-invalid @enderror"
+                                    name="harga_satuan">
                                 @error('harga_satuan')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -54,7 +54,8 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Jumlah Barang</label>
-                                <textarea class="form-control  @error('jumlah_barang') is-invalid @enderror" name="jumlah_barang"></textarea>
+                                <input type="text" class="form-control @error('total_harga') is-invalid @enderror"
+                                    name="jumlah_barang">
                                 @error('jumlah_barang')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

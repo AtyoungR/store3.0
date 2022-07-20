@@ -55,6 +55,7 @@ class PembelianController extends Controller
         $pembelian->nama_barang = $request->nama_barang;
         $pembelian->harga_satuan = $request->harga_satuan;
         $pembelian->jumlah_barang = $request->jumlah_barang;
+        $pembelian->total_harga = $request->harga_satuan * $request->jumlah_barang;
         $pembelian->save();
         return redirect()->route('pembelian.index')
             ->with('success', 'Data berhasil dibuat!');
@@ -107,6 +108,7 @@ class PembelianController extends Controller
         $pembelian->nama_barang = $request->nama_barang;
         $pembelian->harga_satuan = $request->harga_satuan;
         $pembelian->jumlah_barang = $request->jumlah_barang;
+        $pembelian->total_harga = $request->harga_satuan * $request->jumlah_barang;
         $pembelian->save();
         return redirect()->route('pembelian.index')
             ->with('success', 'Data berhasil diedit!');

@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Pembelian extends Model
 {
     use HasFactory;
-    public $fillable = ['nama_pembeli','tgl_pembelian','nama_barang','harga_satuan','jumlah_barang'];
+    public $fillable = ['nama_pembeli','tgl_pembelian','nama_barang','harga_satuan','jumlah_barang','total_harga'];
     public $timestamps = true;
 }
